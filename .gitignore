@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Django
+/media
+/staticfiles
+
+# Docker
+*.log
+.env
+db_data/   # if you have a local volume for Postgres
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# Mac stuff
+.DS_Store
