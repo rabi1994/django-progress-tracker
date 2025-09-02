@@ -7,6 +7,7 @@ services:
     command: >
       sh -c "./wait-for-it.sh db:5432 -- 
             python manage.py migrate &&
+            python manage.py createsuperuser --noinput --username $DJANGO_SUPERUSER_USERNAME --email $DJANGO_SUPERUSER_EMAIL || true &&
             python manage.py runserver 0.0.0.0:8000"
 
     volumes:
@@ -16,8 +17,10 @@ services:
     env_file:
       - .env
     depends_on:
-      - db
-      - redis
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
 
   db:
     image: postgres:15
@@ -31,6 +34,11 @@ services:
       - "5432:5432"
     volumes:
       - ./db:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER}"]
+      interval: 5s
+      retries: 5
+      timeout: 5s
 
   redis:
     image: redis:7
@@ -38,6 +46,11 @@ services:
     restart: always
     ports:
       - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      retries: 5
+      timeout: 5s
 
   adminer:
     image: adminer
