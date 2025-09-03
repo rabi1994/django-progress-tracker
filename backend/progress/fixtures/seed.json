@@ -1,0 +1,7 @@
+[
+  {"model": "progress.topic", "pk": 1, "fields": {"name": "PostgreSQL Basics", "description": "Tables, PK/FK"}},
+  {"model": "progress.topic", "pk": 2, "fields": {"name": "Django + DRF", "description": "Serializers, ViewSets"}},
+  {"model": "progress.lesson", "pk": 1, "fields": {"topic": 1, "title": "Create tables", "order": 1}},
+  {"model": "progress.lesson", "pk": 2, "fields": {"topic": 1, "title": "SELECT with JOIN", "order": 2}},
+  {"model": "progress.lesson", "pk": 3, "fields": {"topic": 2, "title": "Serializer basics", "order": 1}}
+]
