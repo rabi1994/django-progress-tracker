@@ -1,0 +1,44 @@
+[
+  { "model": "progress.topic", "pk": 1, "fields": { "name": "Course Progress (6 Weeks)", "description": "Full backend plan: Django + DRF + DevOps + RDS" } },
+  { "model": "progress.topic", "pk": 2, "fields": { "name": "Setup & Infra", "description": "Environment, Docker, RDS, CI/CD" } },
+
+  { "model": "progress.lesson", "pk": 1,  "fields": { "topic": 2, "title": "Project Dockerized (backend + db)", "order": 1 } },
+  { "model": "progress.lesson", "pk": 2,  "fields": { "topic": 2, "title": "Django entrypoint + healthchecks", "order": 2 } },
+  { "model": "progress.lesson", "pk": 3,  "fields": { "topic": 2, "title": "AWS RDS connected (success)", "order": 3 } },
+
+  { "model": "progress.lesson", "pk": 10, "fields": { "topic": 1, "title": "W1D1 – PostgreSQL basics + schema design", "order": 10 } },
+  { "model": "progress.lesson", "pk": 11, "fields": { "topic": 1, "title": "W1D2 – Advanced SQL + indexing", "order": 11 } },
+  { "model": "progress.lesson", "pk": 12, "fields": { "topic": 1, "title": "W1D3 – Django project setup + models", "order": 12 } },
+  { "model": "progress.lesson", "pk": 13, "fields": { "topic": 1, "title": "W1D4 – Migrations + Admin", "order": 13 } },
+  { "model": "progress.lesson", "pk": 14, "fields": { "topic": 1, "title": "W1D5 – DRF basics (serializers + viewsets + URLs)", "order": 14 } },
+
+  { "model": "progress.lesson", "pk": 20, "fields": { "topic": 1, "title": "W2D6 – REST best practices + refactor endpoints", "order": 20 } },
+  { "model": "progress.lesson", "pk": 21, "fields": { "topic": 1, "title": "W2D7 – Django Auth basics (sessions)", "order": 21 } },
+  { "model": "progress.lesson", "pk": 22, "fields": { "topic": 1, "title": "W2D8 – JWT with SimpleJWT", "order": 22 } },
+  { "model": "progress.lesson", "pk": 23, "fields": { "topic": 1, "title": "W2D9 – Role-based permissions (admin/user)", "order": 23 } },
+  { "model": "progress.lesson", "pk": 24, "fields": { "topic": 1, "title": "W2D10 – Filtering & pagination", "order": 24 } },
+
+  { "model": "progress.lesson", "pk": 30, "fields": { "topic": 1, "title": "W3D11 – Middleware (request logging)", "order": 30 } },
+  { "model": "progress.lesson", "pk": 31, "fields": { "topic": 1, "title": "W3D12 – Signals (email on create)", "order": 31 } },
+  { "model": "progress.lesson", "pk": 32, "fields": { "topic": 1, "title": "W3D13 – Redis caching", "order": 32 } },
+  { "model": "progress.lesson", "pk": 33, "fields": { "topic": 1, "title": "W3D14 – FastAPI mini (async)", "order": 33 } },
+  { "model": "progress.lesson", "pk": 34, "fields": { "topic": 1, "title": "W3D15 – WebSockets (chat demo)", "order": 34 } },
+
+  { "model": "progress.lesson", "pk": 40, "fields": { "topic": 1, "title": "W4D16 – System design notes (scaling, sharding)", "order": 40 } },
+  { "model": "progress.lesson", "pk": 41, "fields": { "topic": 1, "title": "W4D17 – Celery + Redis (async tasks)", "order": 41 } },
+  { "model": "progress.lesson", "pk": 42, "fields": { "topic": 1, "title": "W4D18 – Food Delivery system design doc", "order": 42 } },
+  { "model": "progress.lesson", "pk": 43, "fields": { "topic": 1, "title": "W4D19 – Dockerize full stack (Django+DB+Redis+Celery)", "order": 43 } },
+  { "model": "progress.lesson", "pk": 44, "fields": { "topic": 1, "title": "W4D20 – System design interview prep", "order": 44 } },
+
+  { "model": "progress.lesson", "pk": 50, "fields": { "topic": 1, "title": "W5D21 – Unit tests (pytest) for API", "order": 50 } },
+  { "model": "progress.lesson", "pk": 51, "fields": { "topic": 1, "title": "W5D22 – Integration tests (Django test client)", "order": 51 } },
+  { "model": "progress.lesson", "pk": 52, "fields": { "topic": 1, "title": "W5D23 – Security: CSRF/SQLi/XSS + bcrypt", "order": 52 } },
+  { "model": "progress.lesson", "pk": 53, "fields": { "topic": 1, "title": "W5D24 – Deploy with Docker + Nginx", "order": 53 } },
+  { "model": "progress.lesson", "pk": 54, "fields": { "topic": 1, "title": "W5D25 – CI/CD with GitHub Actions", "order": 54 } },
+
+  { "model": "progress.lesson", "pk": 60, "fields": { "topic": 1, "title": "W6D26 – Food Delivery models", "order": 60 } },
+  { "model": "progress.lesson", "pk": 61, "fields": { "topic": 1, "title": "W6D27 – Users + restaurants endpoints", "order": 61 } },
+  { "model": "progress.lesson", "pk": 62, "fields": { "topic": 1, "title": "W6D28 – Orders API", "order": 62 } },
+  { "model": "progress.lesson", "pk": 63, "fields": { "topic": 1, "title": "W6D29 – Celery + caching on Food Delivery", "order": 63 } },
+  { "model": "progress.lesson", "pk": 64, "fields": { "topic": 1, "title": "W6D30 – Deploy + final system design doc", "order": 64 } }
+]
