@@ -4,12 +4,7 @@ services:
   backend:
     build: ./backend
     container_name: tracker_backend
-    command: >
-      sh -c "./wait-for-it.sh db:5432 -- 
-            python manage.py migrate &&
-            python manage.py createsuperuser --noinput --username $DJANGO_SUPERUSER_USERNAME --email $DJANGO_SUPERUSER_EMAIL || true &&
-            python manage.py runserver 0.0.0.0:8000"
-
+    command: ["/entrypoint.sh"]
     volumes:
       - ./backend:/app
     ports:
@@ -32,8 +27,9 @@ services:
       POSTGRES_DB: ${POSTGRES_DB}
     ports:
       - "5432:5432"
+    # use a named volume for portability
     volumes:
-      - ./db:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER}"]
       interval: 5s
@@ -57,3 +53,6 @@ services:
     restart: always
     ports:
       - "8080:8080"
+
+volumes:
+  postgres_data:
